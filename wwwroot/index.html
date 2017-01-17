@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base href="/">
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Polyfill(s) for older browsers -->
+    <script src="js/core.js"></script>
+    <environment names="Development">
+        <script src="node_modules/@Angular/router/src/router.js"></script>
+    </environment>
+    
+    <environment names="Staging,Production">
+        <script src="node_modules/@Angular/router/bundles/router.umd.js"></script>
+    </environment>
+    <script src="js/zone.js"></script>
+    <script src="js/reflect.js"></script>
+    <script src="js/system.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+  </body>
+</html>
